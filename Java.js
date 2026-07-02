@@ -17,7 +17,7 @@ saveBtn.addEventListener("click", async () => {
     // If no file is open, show the picker (Save As)
     if (!currentFileHandle) {
       currentFileHandle = await window.showSaveFilePicker({
-        suggestedName: "my-draft.txt",
+        suggestedName: "Draft.txt",
         types: [
           {
             description: "Text Files",
