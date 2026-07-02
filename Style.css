@@ -1,0 +1,47 @@
+textarea {
+  width: 60%;
+  height: 100vh;
+  border: none;
+  background: transparent;
+  font-family: "Roboto", serif;
+  font-size: 1.2rem;
+  padding: 50px;
+  outline: none;
+  resize: none;
+}
+body {
+  background-color: #1f1e1e;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+#editor {
+  width: 100%;
+  max-width: 700px; /* Limits width for readability */
+  height: 100vh;
+  padding: 100px 20px;
+  font-family: "Roboto", serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  outline: none;
+  resize: none;
+  color: #dadada;
+}
+#saveBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: #0b4eca;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+body:hover #saveBtn {
+  opacity: 1; /* Button appears only when you hover over the body */
+}
