@@ -71,19 +71,19 @@ loadBtn.addEventListener("click", async () => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    if (editor) {
-        editor.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab') {
-                e.preventDefault();
-                const start = this.selectionStart;
-                const end = this.selectionEnd;
-                // Using spaces instead of "\t" to ensure zero formatting conflicts
-                const spaces = "    "; 
-                this.value = this.value.substring(0, start) + spaces + this.value.substring(end);
-                this.selectionStart = this.selectionEnd = start + spaces.length;
-            }
-        });
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  if (editor) {
+    editor.addEventListener("keydown", function (e) {
+      if (e.key === "Tab") {
+        e.preventDefault();
+        const start = this.selectionStart;
+        const end = this.selectionEnd;
+        // Using spaces instead of "\t" to ensure zero formatting conflicts
+        const spaces = "    ";
+        this.value =
+          this.value.substring(0, start) + spaces + this.value.substring(end);
+        this.selectionStart = this.selectionEnd = start + spaces.length;
+      }
+    });
+  }
 });
