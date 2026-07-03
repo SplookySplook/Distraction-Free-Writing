@@ -71,3 +71,22 @@ loadBtn.addEventListener("click", async () => {
     if (err.name !== "AbortError") console.error(err);
   }
 });
+
+const editor = document.getElementById('editor');
+
+editor.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+        // Stop the default browser focus shift
+        e.preventDefault();
+        
+        // Insert the tab character at the current cursor position
+        const start = editor.selectionStart;
+        const end = editor.selectionEnd;
+        
+        // This takes the existing text and inserts a tab string
+        editor.value = editor.value.substring(0, start) + "\t" + editor.value.substring(end);
+        
+        // Move the cursor to after the new tab
+        editor.selectionStart = editor.selectionEnd = start + 1;
+    }
+});
