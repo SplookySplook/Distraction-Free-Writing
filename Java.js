@@ -11,7 +11,6 @@ editor.addEventListener("input", () => {
   localStorage.setItem("myDraft", editor.value);
 });
 
-// Save Function
 saveBtn.addEventListener("click", async () => {
   try {
     // If no file is open, show the picker (Save As)
